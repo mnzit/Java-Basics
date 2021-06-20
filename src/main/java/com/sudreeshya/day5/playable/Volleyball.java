@@ -1,4 +1,4 @@
-package com.sudreeshya.day5;
+package com.sudreeshya.day5.playable;
 
 // concrete - complete
 public class Volleyball extends Ball {

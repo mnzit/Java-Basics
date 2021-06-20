@@ -9,5 +9,8 @@
         <module name="sud-d5-b2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sud-d5-b2" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

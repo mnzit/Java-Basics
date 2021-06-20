@@ -1,7 +1,7 @@
-package com.sudreeshya.day5;
+package com.sudreeshya.day5.playable;
 
 // abstract class
-public abstract class Ball {
+public abstract class Ball implements Playable{
 
     protected Double radius;
     protected Double weight;
@@ -32,6 +32,4 @@ public abstract class Ball {
     public void setColor(String color) {
         this.color = color;
     }
-
-    public abstract void play();
 }

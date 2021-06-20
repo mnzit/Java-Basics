@@ -1,11 +1,16 @@
 package com.sudreeshya.day5;
 
-// concrete - complete
-public class Football extends Ball {
+public class Football implements OutdoorGame{
 
-    @Override
-    public void play() {
-        color = "White";
-        System.out.println("Playing " + color + " football");
+    @Override public void jump() {
+
+    }
+
+    @Override public void strike() {
+
+    }
+
+    @Override public void run() {
+
     }
 }
