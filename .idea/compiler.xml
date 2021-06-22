@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sud-d5-b2" />
+        <module name="sud-b2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sud-d5-b2" target="8" />
+      <module name="sud-b2" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
