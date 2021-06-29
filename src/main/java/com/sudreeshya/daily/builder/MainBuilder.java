@@ -22,7 +22,7 @@ public class MainBuilder {
                 .build();
 
 
-        child.se
+        child.setFname("asd");
         System.out.println(child);
     }
 }
