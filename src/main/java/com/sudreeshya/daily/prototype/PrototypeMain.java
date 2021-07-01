@@ -11,5 +11,6 @@ public class PrototypeMain {
         System.out.println(rectangle);
         rectangle.setSize(112);
         rectangle.draw();
+
     }
 }
