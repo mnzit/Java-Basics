@@ -8,7 +8,9 @@ public class AdapterV2Main {
     public static void main(String args[]){
         FileReader fileReader = new MyFileReader();
 
-        System.out.println(fileReader.read());
+       for(String s: fileReader.read()){
+           System.out.println(s);
+       }
 
         DatabaseReader databaseReader = new MyAdapter(new MyFileReader());
         Student[] students = (Student[]) databaseReader.executeQuery();

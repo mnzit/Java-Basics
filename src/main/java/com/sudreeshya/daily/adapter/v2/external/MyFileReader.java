@@ -11,7 +11,7 @@ public class MyFileReader implements FileReader {
     @Override
     public String[] read() {
         ClassLoader classLoader = getClass().getClassLoader();
-        String[] lines = new String[10];
+        String[] lines = new String[1];
         try {
             File file = new File(classLoader.getResource("students.txt").getFile());
             java.io.FileReader fr = new java.io.FileReader(file);   //reads the file
@@ -22,14 +22,16 @@ public class MyFileReader implements FileReader {
             while ((line = br.readLine()) != null) {
                 if (i > 0) {
                     String[] temp = new String[i + 1];
-                    for (int j = 0, linesLength = lines.length; j < linesLength; j++) {
+                    for (int j = 0; j < lines.length; j++) {
                         temp[j] = lines[j];
                     }
                     i++;
                     temp[i - 1] = line;
+                    temp[i - 1] = line;
                     lines = temp;
                 }else {
-                    lines[i++] = line;
+                    lines[i] = line;
+                    i++;
                 }
             }
             fr.close();    //closes the stream and release the resources
