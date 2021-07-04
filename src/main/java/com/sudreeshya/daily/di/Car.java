@@ -6,10 +6,10 @@ public class Car {
     private String model;
     private String type;
 
-    @Autowired
+
     private Engine engine;
 
     public Car (){
-        engine.start();
+//        engine.start();
     }
 }
