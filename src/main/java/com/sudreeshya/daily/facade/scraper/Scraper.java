@@ -1,4 +1,4 @@
-package com.sudreeshya.daily.facade;
+package com.sudreeshya.daily.facade.scraper;
 
 import org.jsoup.nodes.Document;
 

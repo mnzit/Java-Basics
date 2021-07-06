@@ -1,4 +1,4 @@
-package com.sudreeshya.daily.facade;
+package com.sudreeshya.daily.facade.webservice;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
