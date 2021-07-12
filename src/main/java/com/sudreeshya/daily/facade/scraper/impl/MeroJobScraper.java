@@ -39,9 +39,11 @@ public class MeroJobScraper implements Scraper {
 
                 jobDetail.setKeySkills(skills);
                 jobDetails.add(jobDetail);
+//
+//                System.out.println(jobDetail);
             }
         } catch (Exception e) {
-            System.out.println("Exception Fetching Data From Scrap");
+//            System.out.println("Exception Fetching Data From Scrap");
         }
         return jobDetails;
     }

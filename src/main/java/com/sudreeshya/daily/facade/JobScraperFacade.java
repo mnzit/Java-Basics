@@ -18,6 +18,7 @@ public class JobScraperFacade {
             int i = 1;
             boolean exists = true;
             while (exists) {
+                System.out.println("Fetching " + jobName + " from page-" + i);
                 Document document = webCaller.call("https://merojob.com/search/?q=" + jobName + "&page=" + (i++));
                 Scraper scraper = new MeroJobScraper();
                 List<JobDetail> jobs = (List<JobDetail>) scraper.scrap(document);

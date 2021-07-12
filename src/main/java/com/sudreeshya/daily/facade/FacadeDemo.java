@@ -27,7 +27,9 @@ public class FacadeDemo {
 //        }
 
         JobScraperFacade jobScraperFacade = new JobScraperFacade();
-        List<JobDetail> meroJob =  jobScraperFacade.scrap("merojob", "java");
+        List<JobDetail> meroJob =  jobScraperFacade.scrap("merojob", "p");
+
+//        System.out.println(meroJob);
         System.out.println(new ObjectMapper().writeValueAsString(meroJob));
     }
 }
