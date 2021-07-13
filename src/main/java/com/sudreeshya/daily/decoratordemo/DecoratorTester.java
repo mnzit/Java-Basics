@@ -1,6 +1,6 @@
-package com.sudreeshya.daily.decorator;
+package com.sudreeshya.daily.decoratordemo;
 
-import com.sudreeshya.daily.decorator.computer.*;
+import com.sudreeshya.daily.decoratordemo.computer.*;
 
 public class DecoratorTester {
 

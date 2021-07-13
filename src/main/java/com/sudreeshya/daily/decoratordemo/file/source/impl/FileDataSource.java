@@ -1,4 +1,6 @@
-package com.sudreeshya.daily.decorator.file;
+package com.sudreeshya.daily.decoratordemo.file.source.impl;
+
+import com.sudreeshya.daily.decoratordemo.file.source.DataSource;
 
 import java.io.File;
 import java.io.FileWriter;

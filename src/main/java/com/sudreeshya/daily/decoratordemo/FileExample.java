@@ -1,8 +1,9 @@
-package com.sudreeshya.daily.decorator.file;
+package com.sudreeshya.daily.decoratordemo;
+
+import com.sudreeshya.daily.decoratordemo.file.util.Aes;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.security.Key;
 import java.util.Scanner;
 
 //  Voids SRP - OFE-CFM

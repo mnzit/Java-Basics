@@ -1,4 +1,4 @@
-package com.sudreeshya.daily.decorator.computer;
+package com.sudreeshya.daily.decoratordemo.computer;
 
 public class AIDecorator extends ComputerDecorator {
 

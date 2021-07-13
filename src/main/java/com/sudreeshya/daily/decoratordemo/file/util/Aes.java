@@ -1,4 +1,4 @@
-package com.sudreeshya.daily.decorator.file.util;
+package com.sudreeshya.daily.decoratordemo.file.util;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;

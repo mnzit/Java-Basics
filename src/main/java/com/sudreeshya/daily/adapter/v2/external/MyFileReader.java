@@ -27,7 +27,6 @@ public class MyFileReader implements FileReader {
                     }
                     i++;
                     temp[i - 1] = line;
-                    temp[i - 1] = line;
                     lines = temp;
                 }else {
                     lines[i] = line;

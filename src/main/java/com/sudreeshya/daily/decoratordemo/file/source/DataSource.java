@@ -1,4 +1,4 @@
-package com.sudreeshya.daily.decorator.file;
+package com.sudreeshya.daily.decoratordemo.file.source;
 
 public interface DataSource {
 

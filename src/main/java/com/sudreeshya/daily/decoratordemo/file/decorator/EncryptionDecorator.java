@@ -1,4 +1,7 @@
-package com.sudreeshya.daily.decorator.file;
+package com.sudreeshya.daily.decoratordemo.file.decorator;
+
+import com.sudreeshya.daily.decoratordemo.file.source.DataSource;
+import com.sudreeshya.daily.decoratordemo.file.util.Aes;
 
 public class EncryptionDecorator extends DataSourceDecorator {
 

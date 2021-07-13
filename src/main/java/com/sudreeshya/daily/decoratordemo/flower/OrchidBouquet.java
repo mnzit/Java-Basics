@@ -1,4 +1,4 @@
-package com.sudreeshya.daily.decorator.flower;
+package com.sudreeshya.daily.decoratordemo.flower;
 
 public class OrchidBouquet extends FlowerBouquet{
 
