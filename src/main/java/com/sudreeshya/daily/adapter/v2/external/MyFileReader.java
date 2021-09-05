@@ -1,7 +1,5 @@
 package com.sudreeshya.daily.adapter.v2.external;
 
-import javafx.beans.property.StringProperty;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;

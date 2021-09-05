@@ -5,4 +5,8 @@ public interface CustomList<T> {
     boolean add(T element);
 
     int size();
+
+    boolean hasNext();
+
+    T next();
 }

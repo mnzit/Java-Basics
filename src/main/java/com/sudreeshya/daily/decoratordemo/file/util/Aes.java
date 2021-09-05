@@ -1,11 +1,9 @@
 package com.sudreeshya.daily.decoratordemo.file.util;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;
+import java.util.Base64;
 
 public class Aes {
 
@@ -21,7 +19,7 @@ public class Aes {
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(key.getBytes("UTF-8"), ALGO));
         byte[] encVal = c.doFinal(data.getBytes());
-        return new BASE64Encoder().encode(encVal);
+        return Base64.getEncoder().encodeToString(encVal);
     }
 
     /**
@@ -33,7 +31,7 @@ public class Aes {
     public static String decrypt(String encryptedData, String key) throws Exception {
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.DECRYPT_MODE, new SecretKeySpec(key.getBytes("UTF-8"), ALGO));
-        byte[] decodedValue = new BASE64Decoder().decodeBuffer(encryptedData);
+        byte[] decodedValue = Base64.getDecoder().decode(encryptedData);
         byte[] decValue = c.doFinal(decodedValue);
         return new String(decValue);
     }

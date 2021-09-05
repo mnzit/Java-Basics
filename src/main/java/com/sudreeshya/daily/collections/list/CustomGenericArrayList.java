@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class CustomGenericArrayList<T> implements CustomList<T> {
     private Object[] collection = new Object[0];
+    private int count = -1;
 
     @Override
     public boolean add(T element) {
@@ -35,5 +36,21 @@ public class CustomGenericArrayList<T> implements CustomList<T> {
     @Override
     public String toString() {
         return Arrays.toString(collection);
+    }
+
+    @Override
+    public boolean hasNext(){
+       if(count == collection.length - 1){
+           count = collection.length - 1;
+           return false;
+       }else{
+           count++;
+           return true;
+       }
+    }
+
+    @Override
+    public T next(){
+        return (T) collection[count];
     }
 }
