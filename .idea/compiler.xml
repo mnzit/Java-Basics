@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sud-b2" />
+        <module name="sud-d5-b2" />
+        <module name="java-basics" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sud-b2" target="8" />
+      <module name="Java-Basics" target="8" />
+      <module name="java-basics" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
