@@ -17,6 +17,7 @@ public class ListTester {
         ages.add(21);
         ages.add(25);
         ages.add(26);
+        ages.add(78);
 
 //        System.out.println(ages);
 
