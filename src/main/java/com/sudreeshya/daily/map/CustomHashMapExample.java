@@ -1,6 +1,6 @@
-package com.sudreeshya.daily.pubsub.code2suceed;
+package com.sudreeshya.daily.map;
 
-public class HashMapExample {
+public class CustomHashMapExample {
     static Object[] heroes = new String[10];
     public static void main(String[] args) {
 

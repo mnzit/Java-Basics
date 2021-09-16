@@ -1,0 +1,171 @@
+package com.sudreeshya.daily.command;
+
+// A simple Java program to demonstrate
+// implementation of Command Pattern using
+// a remote control example.
+
+
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+// An interface for command
+interface Command
+{
+    public void execute();
+}
+
+// Light class and its corresponding command
+// classes
+class Light
+{
+    public void on()
+    {
+        System.out.println("Light is on");
+    }
+    public void off()
+    {
+        System.out.println("Light is off");
+    }
+}
+class LightOnCommand implements Command
+{
+    Light light;
+
+    // The constructor is passed the light it
+    // is going to control.
+    public LightOnCommand(Light light)
+    {
+        this.light = light;
+    }
+    public void execute()
+    {
+        light.on();
+    }
+}
+class LightOffCommand implements Command
+{
+    Light light;
+    public LightOffCommand(Light light)
+    {
+        this.light = light;
+    }
+    public void execute()
+    {
+        light.off();
+    }
+}
+
+// Stereo and its command classes
+class Stereo
+{
+    public void on()
+    {
+        System.out.println("Stereo is on");
+    }
+    public void off()
+    {
+        System.out.println("Stereo is off");
+    }
+    public void setCD()
+    {
+        System.out.println("Stereo is set " +
+                "for CD input");
+    }
+    public void setDVD()
+    {
+        System.out.println("Stereo is set"+
+                " for DVD input");
+    }
+    public void setRadio()
+    {
+        System.out.println("Stereo is set" +
+                " for Radio");
+    }
+    public void setVolume(int volume)
+    {
+        // code to set the volume
+        System.out.println("Stereo volume set"
+                + " to " + volume);
+    }
+}
+class StereoOffCommand implements Command
+{
+    Stereo stereo;
+    public StereoOffCommand(Stereo stereo)
+    {
+        this.stereo = stereo;
+    }
+    public void execute()
+    {
+        stereo.off();
+    }
+}
+class StereoOnWithCDCommand implements Command
+{
+    Stereo stereo;
+    public StereoOnWithCDCommand(Stereo stereo)
+    {
+        this.stereo = stereo;
+    }
+    public void execute()
+    {
+        stereo.on();
+        stereo.setCD();
+        stereo.setVolume(11);
+    }
+}
+
+// A Simple remote control with one button
+class SimpleRemoteControl
+{
+    Command slot;  // only one button
+
+    public SimpleRemoteControl()
+    {
+    }
+
+    public void setCommand(Command command)
+    {
+        // set the command the remote will
+        // execute
+        slot = command;
+    }
+
+    public void buttonWasPressed()
+    {
+        slot.execute();
+    }
+}
+
+// Driver class
+public class RemoteControlTest
+{
+    public static void main(String[] args)
+    {
+        SimpleRemoteControl remote =
+                new SimpleRemoteControl();
+        Light light = new Light();
+        Stereo stereo = new Stereo();
+
+        Map<String,Command> cmds = new HashMap<>();
+
+        cmds.put("--onLight", new LightOnCommand(light));
+        cmds.put("--offLight", new LightOffCommand(light));
+        cmds.put("--onStereo", new StereoOnWithCDCommand(stereo));
+        cmds.put("--offStereo", new StereoOffCommand(stereo));
+
+        Scanner scanner = new Scanner(System.in);
+
+        while(true){
+            String cmd = scanner.next();
+            Command command = cmds.get(cmd);
+            if(command != null) {
+                command.execute();
+            }else{
+                System.out.println("Command not recognized!");
+            }
+        }
+    }
+}
